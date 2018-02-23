@@ -3,8 +3,8 @@
 </template>
 
 <script>
-import ImagesList from "./../components/ImagesList";
-import { getImages } from "./../services/imageService";
+import ImagesList from './../components/ImagesList'
+import { getImages } from './../services/imageService'
 
 export default {
   components: {
@@ -13,15 +13,15 @@ export default {
   data() {
     return {
       images: []
-    };
+    }
   },
   mounted() {
-    this.loadImages();
+    this.loadImages()
   },
   methods: {
     async loadImages() {
-      this.images = await getImages();
+      this.images = await getImages()
     }
   }
-};
+}
 </script>

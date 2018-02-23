@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import ImagesContainer from "./../containers/ImagesContainer";
+import ImagesContainer from './../containers/ImagesContainer'
 
 export default {
-  name: "PageLayout",
+  name: 'PageLayout',
   components: {
     ImagesContainer
   }
-};
+}
 </script>
 
 <style scoped>

@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import Card from "./Card";
+import Card from './Card'
 export default {
-  name: "ImagesList",
+  name: 'ImagesList',
   components: {
     Card
   },
@@ -27,7 +27,7 @@ export default {
       default: () => []
     }
   }
-};
+}
 </script>
 
 <style scoped>
