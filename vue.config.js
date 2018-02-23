@@ -1,11 +1,11 @@
-const Dotenv = require("dotenv-webpack");
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   configureWebpack: config => {
-    if (process.env.NODE_ENV === "development") {
-      config.devtool = "source-map";
+    if (process.env.NODE_ENV === 'development') {
+      config.devtool = 'source-map'
     }
 
-    config.plugins.push(new Dotenv());
+    config.plugins.push(new Dotenv())
   }
-};
+}
