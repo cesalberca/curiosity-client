@@ -1,10 +1,14 @@
 {
   "root": true,
   "extends": [
-    "plugin:vue/essential",
+    "plugin:vue/recommended",
     "@vue/prettier"
   ],
   "parserOptions": {
     "ecmaVersion": 2017
+  },
+  "globals": {
+    "module": true,
+    "require": true
   }
 }

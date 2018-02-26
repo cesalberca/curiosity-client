@@ -6,7 +6,7 @@
 import PageLayout from './layouts/PageLayout'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     PageLayout
   }

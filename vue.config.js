@@ -1,4 +1,5 @@
 const Dotenv = require('dotenv-webpack')
+const fs = require('fs')
 
 module.exports = {
   configureWebpack: config => {
@@ -7,5 +8,12 @@ module.exports = {
     }
 
     config.plugins.push(new Dotenv())
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        data: fs.readFileSync('src/assets/variables.scss', 'utf-8')
+      }
+    }
   }
 }

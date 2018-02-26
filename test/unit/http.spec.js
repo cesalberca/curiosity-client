@@ -11,3 +11,9 @@ describe('parses url params and gives them the correct signature', () => {
     expect(actualUrl).toBe('?page=1&camera=MAST&earth_date=2017-12-12')
   })
 })
+
+describe('handles the http requests', () => {
+  it('calls fetch with the given url', () => {
+    // const mock = jest.fn()
+  })
+})

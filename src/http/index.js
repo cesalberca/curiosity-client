@@ -12,10 +12,9 @@ async function request(url) {
 export function parseUrlParams(params) {
   return (
     '?' +
-    Object.entries(params).reduce(
-      (previous, current) => `${previous}${previous ? '&' : ''}${current[0]}=${current[1]}`,
-      ''
-    )
+    Object.entries(params)
+      .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
+      .join('&')
   )
 }
 

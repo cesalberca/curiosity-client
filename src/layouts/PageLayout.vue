@@ -1,6 +1,6 @@
 <template>
-  <main class="pl-container">
-    <ImagesContainer class="pl-images-list-container"/>
+  <main class="page-layout__container">
+    <ImagesContainer class="page-layout__images-list-container"/>
   </main>
 </template>
 
@@ -15,13 +15,28 @@ export default {
 }
 </script>
 
-<style scoped>
-.pl-container {
-  display: grid;
-  grid-template-columns: 1fr var(--container) 1fr;
+<style scoped lang="scss">
+.page-layout {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr var(--container) 1fr;
+  }
+
+  &__images-list-container {
+    grid-column-start: 2;
+  }
 }
 
-.pl-images-list-container {
-  grid-column-start: 2;
+@media (max-width: $desktop) {
+  .page-layout {
+    &__container {
+      grid-template-columns: 1fr;
+      padding: var(--spacing-unit-s);
+    }
+
+    &__images-list-container {
+      grid-column-start: 1;
+    }
+  }
 }
 </style>
