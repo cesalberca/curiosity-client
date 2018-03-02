@@ -1,10 +1,11 @@
 <template>
   <div>
-    <h1>Curiosity</h1>
+    <h1>Curiosity dice: {{ $t('hello') }}</h1>
     <Card
-      class="images-list__card"
       v-for="image in images"
-      :key="image.id">
+      :key="image.id"
+      class="images-list__card">
+
       <div class="images-list__img">
         <img
           :src="image.img_src"
@@ -18,6 +19,17 @@
     </Card>
   </div>
 </template>
+
+<i18n>
+{
+  "en": {
+    "hello": "hello world!"
+  },
+  "es": {
+    "hello": "¡hola mundo!"
+  }
+}
+</i18n>
 
 <script>
 import Card from './Card'
