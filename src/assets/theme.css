@@ -1,9 +1,12 @@
 :root {
   --box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-  --foreground-color: hsla(0, 0, 90%, 1);
-  --spacing-unit: 2rem;
-  --spacing-unit-m: 1rem;
-  --spacing-unit-s: 0.5rem;
+  --spaced: 2rem;
+  --spaced-m: 1rem;
+  --spaced-s: 0.5rem;
 
   --container: 800px;
+
+  --color-primary: hsla(348, 79%, 50%, 1);
+  --color-foreground: hsla(0, 0%, 100%, 1);
+  --color-background: hsla(0, 0%, 10%, 1);
 }

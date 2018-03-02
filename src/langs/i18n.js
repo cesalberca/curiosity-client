@@ -1,10 +1,17 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import { messages } from './translations/es'
+import es from './locales/es.json'
 
 Vue.use(VueI18n)
 
+const locale = 'es'
+const messages = {
+  es
+}
+
 export const i18n = new VueI18n({
-  locale: 'es',
+  locale,
   messages
 })
+
+window.i18n = i18n

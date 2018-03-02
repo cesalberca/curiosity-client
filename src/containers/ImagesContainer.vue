@@ -1,39 +1,25 @@
 <template>
-  <div>
-    <select
-      v-model="selected"
-      @change="changeLanguage">
-      <option value="es">ES</option>
-      <option value="en">EN</option>
-    </select>
-    <ImagesList :images="images"/>
-  </div>
+  <ImagesList :images="images"/>
 </template>
 
 <script>
 import ImagesList from '../components/ImagesList'
 import { getImages } from '../services/imageService'
-import { loadLanguageAsync } from '../langs/utils'
 
 export default {
+  name: 'ImagesContainer',
   components: {
     ImagesList
   },
-  data() {
-    return {
-      images: [],
-      selected: 'es'
-    }
-  },
+  data: () => ({
+    images: []
+  }),
   mounted() {
     this.loadImages()
   },
   methods: {
     async loadImages() {
       this.images = await getImages()
-    },
-    changeLanguage() {
-      loadLanguageAsync(this.selected)
     }
   }
 }

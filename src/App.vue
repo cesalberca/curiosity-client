@@ -1,14 +1,26 @@
 <template>
-  <PageLayout />
+  <section>
+    <Navbar :on-language-change="changeLanguage"/>
+    <router-view/>
+  </section>
 </template>
 
 <script>
-import PageLayout from './layouts/PageLayout'
+import Navbar from './components/Navbar'
+import { loadLanguage } from './langs/utils'
 
 export default {
   name: 'App',
   components: {
-    PageLayout
+    Navbar
+  },
+  data: () => ({
+    selected: 'es'
+  }),
+  methods: {
+    changeLanguage(lang) {
+      loadLanguage(lang)
+    }
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Curiosity dice: {{ $t('hello') }}</h1>
+    <h1>Curiosity: {{ $t('hello') }}</h1>
     <Card
       v-for="image in images"
       :key="image.id"
@@ -44,7 +44,7 @@ export default {
     flex-direction: row;
     height: 200px;
     width: 100%;
-    margin: var(--spacing-unit) 0;
+    margin: var(--spaced) 0;
   }
 
   &__img {
@@ -58,7 +58,7 @@ export default {
   }
 
   &__info {
-    padding: var(--spacing-unit);
+    padding: var(--spaced);
     flex: 1;
   }
 }
