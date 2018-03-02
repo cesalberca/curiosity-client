@@ -1,26 +1,16 @@
-import { config } from './../config'
+import axios from 'axios'
+import { config as httpConfig } from './../config'
 
-async function get(url, params) {
-  return this.request(url + parseUrlParams(params))
-}
+const instance = axios.create({
+  baseURL: 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity'
+})
 
-async function request(url) {
-  const response = await fetch(`${this.baseUrl}${url}&api_key=${this.apiKey}`)
-  return response.json()
-}
+instance.interceptors.request.use(config => {
+  config.params = {
+    ...config.params,
+    api_key: httpConfig.apiKey
+  }
+  return config
+})
 
-export function parseUrlParams(params) {
-  return (
-    '?' +
-    Object.entries(params)
-      .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
-      .join('&')
-  )
-}
-
-export default {
-  baseUrl: 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity',
-  apiKey: config.apiKey,
-  get,
-  request
-}
+export const http = instance

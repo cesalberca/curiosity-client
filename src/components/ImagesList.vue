@@ -20,17 +20,6 @@
   </div>
 </template>
 
-<i18n>
-{
-  "en": {
-    "hello": "hello world!"
-  },
-  "es": {
-    "hello": "¡hola mundo!"
-  }
-}
-</i18n>
-
 <script>
 import Card from './Card'
 
