@@ -13,15 +13,6 @@
       "sourceMapPathOverrides": {
           "webpack:///src/*": "${webRoot}/*"
       }
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Debug Tests",
-      "program": "${workspaceRoot}/node_modules/jest/bin/jest",
-      "args": ["--runInBand"],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
