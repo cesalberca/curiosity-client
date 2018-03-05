@@ -6,8 +6,11 @@ import './assets/base.css'
 
 import { i18n } from './langs/i18n'
 import { router } from './router'
+import { configureElement } from './element'
 
 Vue.config.productionTip = false
+
+configureElement()
 
 new Vue({
   i18n,
