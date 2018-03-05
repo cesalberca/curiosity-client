@@ -2,7 +2,7 @@
   <PageLayout class="about-view">
     <p>{{ $t('welcome') }}</p>
     <Tabs
-      class="tabs">
+      class="about-view__tabs">
       <TabPane>
         <span
           slot="label"
@@ -47,18 +47,50 @@ export default {
 
 <style lang="scss" scoped>
 .about-view {
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__icon {
-    border: 1px solid black;
+    border: 2px solid #dfdfdf;
     border-radius: 50%;
     padding: 10px;
   }
 
   /deep/ .el-tabs__active-bar {
-    display: none;
+    --triangle-size: 10px;
+
+    // Element uses inline styles to give a width, se we *must* use !important in this case
+    width: 0 !important;
+    height: 0;
+    bottom: -60%;
+    margin-left: 7px;
+    background-color: transparent;
+    border-left: var(--triangle-size) solid transparent;
+    border-right: var(--triangle-size) solid transparent;
+    border-bottom: var(--triangle-size) solid #dfdfdf;
+  }
+
+  /deep/ .el-tabs__nav-scroll {
+    overflow: visible;
+  }
+
+  /deep/ .el-tabs__nav-wrap {
+    overflow: visible;
   }
 
   /deep/ .el-tabs__nav-wrap::after {
     display: none;
+  }
+
+  /deep/ .el-tabs__content {
+    overflow: hidden;
+    position: relative;
+    margin-top: var(--spaced-s);
+    background-color: #dfdfdf;
+    padding: var(--spaced);
+    border-radius: 3px;
   }
 }
 </style>
