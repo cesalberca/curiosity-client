@@ -3,24 +3,22 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
 import ImagesList from '../components/ImagesList'
-import { getImages } from '../services/imageService'
 
 export default {
   name: 'ImagesContainer',
   components: {
     ImagesList
   },
-  data: () => ({
-    images: []
-  }),
+  computed: {
+    ...mapState(['images'])
+  },
   mounted() {
-    this.loadImages()
+    this.FETCH_IMAGES()
   },
   methods: {
-    async loadImages() {
-      this.images = await getImages()
-    }
+    ...mapActions(['FETCH_IMAGES'])
   }
 }
 </script>

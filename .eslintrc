@@ -10,6 +10,7 @@
   "globals": {
     "module": true,
     "require": true,
-    "process": true
+    "process": true,
+    "jest": true
   }
 }

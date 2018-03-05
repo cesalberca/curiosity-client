@@ -1,4 +1,4 @@
-import { getFormattedDate } from '../../../src/utils/dateFormatter'
+import { getFormattedDate } from '../../src/utils/dateFormatter'
 
 describe('formats the date correctly', () => {
   it('retrieves only the date, ignoring the time', () => {
