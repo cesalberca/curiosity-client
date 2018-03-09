@@ -1,5 +1,5 @@
-import { http } from '../http'
-import { getFormattedDate } from '../utils/dateFormatter'
+import { http } from '@/http'
+import { getFormattedDate } from '@/utils/date-formatter'
 import { Image } from '@/models/Image'
 
 export async function getImages(): Promise<Image[]> {

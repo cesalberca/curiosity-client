@@ -1,5 +1,5 @@
 import { Commit } from 'vuex'
-import { getImages } from '../services/imageService'
+import { getImages } from '@/services/image-service'
 import { SET_IMAGES } from './mutation-types'
 
 export default {

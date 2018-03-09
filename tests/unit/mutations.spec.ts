@@ -1,4 +1,4 @@
-import mutations from '../../src/store/mutations'
+import mutations from '@/store/mutations'
 import images from './fixtures/images.json'
 
 describe('mutations', () => {

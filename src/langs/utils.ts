@@ -1,5 +1,5 @@
 import { i18n } from './i18n'
-import { http } from '../http'
+import { http } from '@/http'
 
 const loadedLanguages: string[] = ['es']
 

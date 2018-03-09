@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import Card from './Card.vue'
-import { Image } from '../models/Image'
+import { Image } from '@/models/Image'
 import { Component, Vue, Prop } from 'vue-property-decorator'
 
 @Component({

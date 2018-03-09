@@ -5,9 +5,9 @@
 <script lang="ts">
 import { mapState, mapActions } from 'vuex'
 import { Action, State } from 'vuex-class'
-import ImagesList from '../components/ImagesList.vue'
+import ImagesList from '@/components/ImagesList.vue'
 import { Component, Vue } from 'vue-property-decorator'
-import { Image } from '../models/Image'
+import { Image } from '@/models/Image'
 
 @Component({
   components: {

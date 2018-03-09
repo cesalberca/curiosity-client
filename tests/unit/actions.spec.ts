@@ -1,6 +1,6 @@
-import actions from '../../src/store/actions'
+import actions from '@/store/actions'
 
-jest.mock('../../src/store/actions')
+jest.mock('@/store/actions')
 
 describe('actions', () => {
   it('should commit the SET_IMAGES mutation with the images retrieved', () => {
