@@ -1,7 +1,8 @@
 import { http } from '../http'
 import { getFormattedDate } from '../utils/dateFormatter'
+import { Image } from '@/models/Image'
 
-export async function getImages() {
+export async function getImages(): Promise<Image[]> {
   return (await http.get('photos', {
     params: {
       page: 1,
