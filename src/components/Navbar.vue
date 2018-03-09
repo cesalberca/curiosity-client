@@ -19,7 +19,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 @Component
 export default class Navbar extends Vue {
   @Prop() onLanguageChange: (language: string) => void
-  selected: string = 'es'
+  selected = 'es'
 
   changeLanguage() {
     this.onLanguageChange(this.selected)

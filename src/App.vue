@@ -16,10 +16,8 @@ import { loadLanguage } from './langs/utils'
   }
 })
 export default class App extends Vue {
-  selected = 'es'
-
-  changeLanguage() {
-    loadLanguage(this.selected)
+  changeLanguage(lang: string) {
+    loadLanguage(lang)
   }
 }
 </script>
