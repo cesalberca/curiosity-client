@@ -5,10 +5,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import PageLayout from './../layouts/PageLayout.vue'
 import ImagesContainer from './../containers/ImagesContainer.vue'
-import { Component } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component({
   components: {

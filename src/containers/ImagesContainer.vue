@@ -3,12 +3,11 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import { mapState, mapActions } from 'vuex'
 import { Action, State } from 'vuex-class'
 import ImagesList from '../components/ImagesList.vue'
-import { Component } from 'vue-property-decorator'
-import { Images } from '@/models/Images'
+import { Component, Vue } from 'vue-property-decorator'
+import { Image } from '../models/Image'
 
 @Component({
   components: {
@@ -16,7 +15,7 @@ import { Images } from '@/models/Images'
   }
 })
 export default class ImagesContainer extends Vue {
-  @State images!: Images[]
+  @State images: Image[]
 
   @Action('FETCH_IMAGES') fetchImages: Function
 

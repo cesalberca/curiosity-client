@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import Card from './Card.vue'
-import { Images } from '../models/Images'
+import { Image } from '../models/Image'
 import { Component, Vue, Prop } from 'vue-property-decorator'
 
 @Component({
@@ -31,7 +31,7 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
   }
 })
 export default class ImagesList extends Vue {
-  @Prop() images: Images[] = []
+  @Prop() images: Image[]
 }
 </script>
 
