@@ -4,10 +4,11 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: 'Card'
-}
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+
+@Component
+export default class Card extends Vue {}
 </script>
 
 <style scoped>

@@ -13,22 +13,17 @@
   </nav>
 </template>
 
-<script>
-export default {
-  name: 'Navbar',
-  props: {
-    onLanguageChange: {
-      type: Function,
-      required: true
-    }
-  },
-  data: () => ({
-    selected: 'es'
-  }),
-  methods: {
-    changeLanguage() {
-      this.onLanguageChange(this.selected)
-    }
+<script lang="ts">
+import Vue from 'vue'
+import { Component, Prop } from 'vue-property-decorator'
+
+@Component
+export default class Navbar extends Vue {
+  @Prop() onLanguageChange: any
+  selected: String = 'es'
+
+  changeLanguage() {
+    this.onLanguageChange(this.selected)
   }
 }
 </script>

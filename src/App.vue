@@ -5,22 +5,21 @@
   </section>
 </template>
 
-<script>
-import Navbar from './components/Navbar'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import Navbar from './components/Navbar.vue'
 import { loadLanguage } from './langs/utils'
 
-export default {
-  name: 'App',
+@Component({
   components: {
     Navbar
-  },
-  data: () => ({
-    selected: 'es'
-  }),
-  methods: {
-    changeLanguage(lang) {
-      loadLanguage(lang)
-    }
+  }
+})
+export default class App extends Vue {
+  selected = 'es'
+
+  changeLanguage() {
+    loadLanguage(this.selected)
   }
 }
 </script>

@@ -2,23 +2,26 @@
   <ImagesList :images="images"/>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import { mapState, mapActions } from 'vuex'
-import ImagesList from '../components/ImagesList'
+import { Action, State } from 'vuex-class'
+import ImagesList from '../components/ImagesList.vue'
+import { Component } from 'vue-property-decorator'
+import { Images } from '@/models/Images'
 
-export default {
-  name: 'ImagesContainer',
+@Component({
   components: {
     ImagesList
-  },
-  computed: {
-    ...mapState(['images'])
-  },
+  }
+})
+export default class ImagesContainer extends Vue {
+  @State images!: Images[]
+
+  @Action('FETCH_IMAGES') fetchImages: Function
+
   mounted() {
-    this.FETCH_IMAGES()
-  },
-  methods: {
-    ...mapActions(['FETCH_IMAGES'])
+    this.fetchImages()
   }
 }
 </script>
