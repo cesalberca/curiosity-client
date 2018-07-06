@@ -1,4 +1,5 @@
-import mutations from '../../src/store/mutations'
+import mutations from '@/store/mutations'
+import images from './fixtures/images.json'
 
 describe('mutations', () => {
   it('should replace the current image state', () => {
@@ -7,11 +8,11 @@ describe('mutations', () => {
     }
 
     const payload = {
-      images: [1, 2, 3]
+      images
     }
 
     mutations.SET_IMAGES(state, payload)
 
-    expect(state.images).toEqual([1, 2, 3])
+    expect(state.images).toEqual(images)
   })
 })

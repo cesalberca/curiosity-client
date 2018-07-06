@@ -20,20 +20,18 @@
   </div>
 </template>
 
-<script>
-import Card from './Card'
+<script lang="ts">
+import Card from './Card.vue'
+import { Image } from '@/models/Image'
+import { Component, Vue, Prop } from 'vue-property-decorator'
 
-export default {
-  name: 'ImagesList',
+@Component({
   components: {
     Card
-  },
-  props: {
-    images: {
-      type: Array,
-      default: () => []
-    }
   }
+})
+export default class ImagesList extends Vue {
+  @Prop() images: Image[]
 }
 </script>
 

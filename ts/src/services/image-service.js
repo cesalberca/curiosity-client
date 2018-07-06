@@ -1,6 +1,5 @@
-import { http } from '../http'
-import { getFormattedDate } from '../utils/dateFormatter'
-
+import { http } from '@/http'
+import { getFormattedDate } from '@/utils/date-formatter'
 export async function getImages() {
   return (await http.get('photos', {
     params: {

@@ -13,5 +13,3 @@ export const i18n = new VueI18n({
   locale,
   messages
 })
-
-window.i18n = i18n

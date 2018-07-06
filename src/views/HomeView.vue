@@ -4,15 +4,16 @@
   </PageLayout>
 </template>
 
-<script>
-import PageLayout from './../layouts/PageLayout'
-import ImagesContainer from './../containers/ImagesContainer'
+<script lang="ts">
+import PageLayout from './../layouts/PageLayout.vue'
+import ImagesContainer from './../containers/ImagesContainer.vue'
+import { Component, Vue } from 'vue-property-decorator'
 
-export default {
-  name: 'HomeView',
+@Component({
   components: {
-    PageLayout,
-    ImagesContainer
+    ImagesContainer,
+    PageLayout
   }
-}
+})
+export default class HomeView extends Vue {}
 </script>

@@ -1,17 +1,17 @@
 import { i18n } from './i18n'
-import { http } from '../http'
-
+import { http } from '@/http'
 const loadedLanguages = ['es']
-
 function setLanguage(lang) {
   i18n.locale = lang
   http.interceptors.request.use(config => {
     config.headers.common['Accept-Language'] = lang
     return config
   })
-  document.querySelector('html').setAttribute('lang', lang)
+  const html = document.querySelector('html')
+  if (html != null) {
+    html.setAttribute('lang', lang)
+  }
 }
-
 export async function loadLanguage(lang) {
   if (i18n.locale !== lang) {
     if (!loadedLanguages.includes(lang)) {

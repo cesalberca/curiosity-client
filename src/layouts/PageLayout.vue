@@ -4,10 +4,10 @@
   </main>
 </template>
 
-<script>
-export default {
-  name: 'PageLayout'
-}
+<script lang="ts">
+import { Vue } from 'vue-property-decorator'
+
+export default class PageLayout extends Vue {}
 </script>
 
 <style scoped lang="scss">
